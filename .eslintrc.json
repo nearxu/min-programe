@@ -1,0 +1,119 @@
+{
+    "root": true,
+    "overrides": [
+        {
+            "files": ["src/**/*.ts", "src/**/*.wxts"],
+            "parserOptions": {
+                "parser": "@typescript-eslint/parser",
+                "project": "tsconfig.json"
+            },
+            "rules": {
+                "@typescript-eslint/no-non-null-assertion": "warn",
+                "@typescript-eslint/no-unnecessary-qualifier": "error",
+                "@typescript-eslint/no-unnecessary-type-assertion": [
+                    "error",
+                    {
+                        "typesToIgnore": []
+                    }
+                ]
+            }
+        },
+        {
+            "files": ["src/**/*.wxts"],
+            "parserOptions": {
+                "parser": "@typescript-eslint/parser",
+                "createDefaultProgram ": true,
+                "project": "src/wxs/tsconfig.json",
+                "extraFileExtensions": [".wxts"]
+            },
+            "env": {
+                "es6": false,
+                "commonjs": true
+            },
+            "globals": {
+                "module": "readonly",
+                "getRegExp": "readonly",
+                "getDate": "readonly",
+                "console": "readonly"
+            }
+        }
+    ],
+    "plugins": ["@typescript-eslint", "prettier"],
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:prettier/recommended",
+        "prettier",
+        "prettier/standard",
+        "prettier/@typescript-eslint"
+    ],
+    "rules": {
+        "prettier/prettier": "warn",
+        "no-cond-assign": ["warn", "always"],
+        "no-dupe-class-members": "off",
+        "no-console": "warn",
+        "require-atomic-updates": "warn",
+        "sort-vars": [
+            "warn",
+            {
+                "ignoreCase": true
+            }
+        ],
+        "require-jsdoc": [
+            "error",
+            {
+                "require": {
+                    "FunctionDeclaration": true,
+                    "MethodDefinition": true
+                }
+            }
+        ],
+        "prefer-const": "error",
+        "prefer-rest-params": "warn",
+        "@typescript-eslint/generic-type-naming": "warn",
+        "@typescript-eslint/no-namespace": "off",
+        "@typescript-eslint/member-naming": [
+            "warn",
+            {
+                "private": "^_[a-z][a-zA-Z0-9]*$",
+                "public": "^\\$?[a-z][a-zA-Z0-9]*$"
+            }
+        ],
+        "@typescript-eslint/member-ordering": "warn",
+        "@typescript-eslint/no-empty-function": "warn",
+        "@typescript-eslint/no-extraneous-class": ["error", {}],
+        "@typescript-eslint/no-this-alias": [
+            "warn",
+            {
+                "allowedNames": []
+            }
+        ],
+        "@typescript-eslint/no-for-in-array": "warn",
+        "@typescript-eslint/prefer-function-type": "warn",
+        "@typescript-eslint/explicit-function-return-type": [
+            "error",
+            {
+                "allowExpressions": true
+            }
+        ]
+    },
+    "env": {
+        "es6": true
+    },
+    "globals": {
+        "module": "readonly",
+        "App": "readonly",
+        "Page": "readonly",
+        "Component": "readonly",
+        "Behavior": "readonly",
+        "wx": "readonly",
+        "getApp": "readonly",
+        "getCurrentPages": "readonly",
+        "console": "readonly",
+        "setTimeout": "readonly",
+        "clearTimeout": "readonly",
+        "setInterval": "readonly",
+        "clearInterval": "readonly",
+        "requirePlugin": "readonly"
+    }
+}

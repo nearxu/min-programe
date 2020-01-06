@@ -1,0 +1,23 @@
+{
+    "description": "项目配置文件",
+    "packOptions": {
+        "ignore": [],
+    },
+    "compileType": "miniprogram",
+    "libVersion": "2.4.0",
+    "projectname": "miniprogram-template",
+    "setting": {
+        "nodeModules": true,
+        "newFeature": true,
+    },
+    "appid": "{{APP_ID}}", // 会被自动替换
+    "condition": {
+        "miniprogram": {
+            "list": [
+                // 下面为自动添加的新建页面
+                /*# INJECT_START {"key": "page"} #*/
+                /*# INJECT_END #*/
+            ],
+        },
+    },
+}

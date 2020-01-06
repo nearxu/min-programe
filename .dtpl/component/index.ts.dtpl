@@ -1,0 +1,27 @@
+/*!
+ * Component: ${ref.folder}/$ModuleName/index
+ * License: ${pkg.license}
+ * Created: ${datetime}
+ */
+
+Component({
+    /**
+     * Component properties
+     */
+    properties: {},
+
+    /**
+     * Component initial data [private]
+     */
+    data: {},
+
+    /**
+     * lifecycle of component
+     */
+    lifetimes: {},
+
+    /**
+     * Component methods
+     */
+    methods: {},
+});

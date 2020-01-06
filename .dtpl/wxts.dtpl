@@ -1,0 +1,11 @@
+/*!
+ * WxsModule: ${folder}/${fileName}
+ * License: ${pkg.license}
+ * Created: ${datetime}
+ */
+
+/// <reference types="miniprogram-wxs"/>
+
+module.exports = {
+    // export functions here as es5 module.
+};

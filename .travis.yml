@@ -1,0 +1,15 @@
+# https://docs.travis-ci.com/user/languages/javascript-with-nodejs/
+
+sudo: false
+language: node_js
+node_js:
+    - "8"
+    - "10"
+    - stable
+git:
+    depth: 3
+
+script:
+    - npm install
+    - npm run build --if-present
+    - npm test

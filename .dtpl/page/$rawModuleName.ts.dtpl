@@ -1,0 +1,11 @@
+/*!
+ * Page: ${ref.folder}/$rawModuleName/${ModuleName}
+ * License: ${pkg.license}
+ * Created: ${datetime}
+ */
+
+/* eslint-disable @typescript-eslint/no-object-literal-type-assertion */
+
+Page({
+    data: {},
+});

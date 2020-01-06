@@ -1,0 +1,19 @@
+<!--plugin/components/alert/alert.wxml-->
+<view class="{{'AlertBg' + (removeBg ? ' noBgColor' : '') + (showAnimateOut ? ' animateOut' : '') + (animateOutStyle === 1 ? ' style1' : ' style2')}}" wx:if="{{showIt}}" catch:touchmove>
+  <view class="{{'alert' + (backgroundUrl ? '' : ' noBgImage') +  (extendClass ? ' ' +extendClass : '') + (titleIcon ? ' hasIcon':'') + (confirmText === 'no' ? ' noButton':'')}}" style="background:url('{{backgroundUrl}}') no-repeat center/cover">
+    <image wx:if="{{closeType === 1 || closeType === 3}}" class="rightClose" bind:tap="hide" data-hide="doCancel" src="{{'https://cdn.ghsmpwalmart.com/saas/activity/prophet/images/close.svg'}}" mode="widthFix"></image>
+    <image wx:if="{{closeType === 2 || closeType === 3}}" class="bottomClose" bind:tap="hide"  data-hide="doCancel" src="{{'https://cdn.ghsmpwalmart.com/saas/activity/prophet/images/circle_close.svg'}}" mode="widthFix"></image>
+    <image wx:if="{{titleIcon}}" class="titleIcon" src="{{titleIcon}}" mode="widthFix"></image>
+    <view class="title" wx:if="{{title}}">{{title}}</view>
+    <view wx:if="{{hasChild}}" class="childContent">
+      <slot></slot>
+    </view>
+    <view class="text" style="{{styleText}}" decode wx:if="{{content}}">{{content}}</view>
+    <button class="button" bind:tap="handle" wx:if="{{confirmText != 'no' && confirmType === 'share'}}" open-type="share">
+      {{confirmText}}
+    </button>
+    <button class="button" bind:tap="handle" wx:if="{{confirmText != 'no' && confirmType != 'share'}}">
+      {{confirmText}}
+    </button>
+  </view>
+</view>

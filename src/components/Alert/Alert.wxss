@@ -1,0 +1,188 @@
+/* plugin/components/alert/alert.wxss */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes scaleFadeOut {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(1.4);
+  }
+}
+
+
+/* 解决加载问题 */
+image {
+  height: 0;
+}
+
+.AlertBg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-timing-function: ease-in;
+  animation: fadeIn 0.3s linear;
+}
+
+.AlertBg.animateOut.style1{
+  animation: fadeOut 0.4s ease-in-out;
+  /* animation-timing-function: cubic-bezier(.21,.64,.7,.27); */
+}
+.AlertBg.animateOut.style2{
+  /* animation-timing-function: cubic-bezier(.21,.64,.7,.27); */
+  animation: scaleFadeOut 0.4s ease-in-out;
+}
+
+.AlertBg .alert {
+  width: 600rpx;
+  margin: auto;
+  position: relative;
+  background-color: #fff;
+  padding-top: 307rpx;
+  padding-bottom: 100rpx;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+}
+
+.AlertBg .alert.noBgImage {
+  padding-top: 0;
+  padding-bottom: 174rpx;
+  width: 600rpx;
+  background-color: #fff !important;
+  margin: auto;
+  border-radius: 10rpx;
+  text-align: center;
+}
+
+.AlertBg .alert.noBgImage.noButton {
+  padding-bottom: 74rpx;
+}
+
+.AlertBg .alert .bg {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.AlertBg .alert .rightClose {
+  width: 52rpx;
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+  margin: auto;
+}
+
+.AlertBg .alert .bottomClose {
+  position: absolute;
+  width: 70rpx;
+  bottom: -130rpx;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.AlertBg .alert .title {
+  text-align: center;
+  font-family: PingFangSC-Semibold;
+  font-size: 32rpx;
+  line-height: 45rpx;
+  color: #333;
+}
+
+.AlertBg .alert .titleIcon {
+  width: 100rpx;
+  margin: 58rpx auto 43rpx;
+}
+
+.AlertBg .alert .text {
+  font-size: 30rpx;
+  line-height: 42rpx;
+  color: #54536b;
+  width: 420rpx;
+  margin: 7rpx auto 0;
+  text-align: center;
+}
+
+.AlertBg .alert .button {
+  width: 340rpx;
+  height: 94rpx;
+  padding: 0;
+  line-height: 94rpx;
+  text-align: center;
+  margin: 34rpx auto 0;
+  border-radius: 6rpx;
+  font-size: 36rpx;
+  color: #000;
+  background-color: #fff;
+  overflow: visible;
+}
+
+.button .buttonIcon {
+  width: 46rpx;
+  margin-left: 23rpx;
+  vertical-align: middle;
+  position: relative;
+  bottom: 25rpx;
+}
+
+.content {
+  position: absolute;
+  top: 80rpx;
+  width: 80%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: #fff;
+}
+
+.AlertBg .alert.hasIcon .button {
+  position: absolute;
+  z-index: 2;
+  bottom: 55rpx;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: #ff5454;
+  color:#fff;
+  border-radius: 6px;
+}
+
+.AlertBg .alert.pwd  .titleIcon {
+  width: 136rpx;
+  margin-bottom: 20rpx;
+}
+
+.AlertBg .alert.member  .titleIcon {
+  width: 148rpx;
+  margin-bottom: 46rpx;
+}

@@ -1,10 +1,3 @@
-# [miniprogram-template](https://github.com/NewFuture/miniprogram-template)
-
-[![Github Actions Status](https://github.com/NewFuture/miniprogram-template/workflows/Node%20CI/badge.svg)](https://github.com/NewFuture/miniprogram-template/actions)
-[![Travis Build Status](https://travis-ci.com/NewFuture/miniprogram-template.svg?branch=master)](https://travis-ci.com/NewFuture/miniprogram-template)
-[![Build Status](https://dev.azure.com/NewFuture-CI/CI/_apis/build/status/NewFuture.miniprogram-template?branchName=master)](https://dev.azure.com/NewFuture-CI/CI/_build/latest?definitionId=1&branchName=master)
-[![Greenkeeper badge](https://badges.greenkeeper.io/NewFuture/miniprogram-template.svg)](https://greenkeeper.io/)
-
 > A wechat miniprogram template project the best practice with TypeScript and VSCode
 >
 > [小程序模板最佳实践(TypeScript+VSCode),使用 [miniprogram-build](https://github.com/NewFuture/miniprogram-build) 工具构建]
@@ -18,19 +11,6 @@
 -   Wechat-Devtools: 小程序开发工具 (并开启`服务端口`)
 
 ## Quick Start [使用]
-
-1. create project [一键创建新项目]
-
-点击 [Use this template ](https://github.com/NewFuture/miniprogram-template/generate) 一键使用此模板项目
-
-或者使用命令行:
-
-```sh
-# 不指定`[本地目录]`则在当前目录创建,`-n`表示使用最新模板
-npm create miniprogram NewFuture/miniprogram-template -n [本地目录]
-# 或者
-# yarn create miniprogram NewFuture/miniprogram-template -n [本地目录]
-```
 
 2. start [在项目文件下运行]
 
@@ -121,3 +101,13 @@ npm start
 -   Azure Pipelines 按需修改 [配置 azure-pipelines.yml](azure-pipelines.yml)
 -   Travis-CI 按需修改 [配置 .travis.yml](.travis.yml)
 -   Github Actions 按需修改 [配置 .github/workflows/nodejs.yml](.github/workflows/)
+
+
+
+## some basic code style
+
+.prettierrc => normal-prettierrc.js
+
+eslintrc.json => normal-eslintrrc
+
+

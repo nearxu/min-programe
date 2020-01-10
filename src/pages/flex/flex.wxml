@@ -1,0 +1,16 @@
+<view>
+    <view class="main">
+      <view class="span width">1</view>
+      <view class="span width">2</view>
+      <view class="span width">3</view>
+      <view class="span width">44</view>
+      <view class="span width">5</view>
+      <view class="span width">6</view>
+      <view class="span width">7</view>
+      <view class="span width">8</view>
+      <view class="span width">9</view>
+      <view class="span width">10</view>
+      <view class="span width">11</view>
+      <view class="emp width">empty</view>
+    </view>
+</view>

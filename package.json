@@ -45,6 +45,8 @@
         "postinstall": "node postinstall.js"
     },
     "dependencies": {
+        "crypto": "^1.0.1",
+        "md5": "^2.2.1",
         "tslib": "^1.10.0"
     },
     "devDependencies": {

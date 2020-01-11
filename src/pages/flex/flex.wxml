@@ -13,4 +13,21 @@
       <view class="span width">11</view>
       <view class="emp width">empty</view>
     </view>
+
+    <view>
+        <view>
+            how use wx:if and wx:else , bindtap , data this.setData
+        </view>
+        <view wx:if="{{istrue}}">hello is true</view>
+        <view wx:else>hello is false</view>
+
+        <view>
+            <button bindtap="tapname">toggle true</button>
+        </view>
+    </view>
+
+    <view>
+        <view>how to use child and parent triggle event</view>
+        <i-child bind:triggerParent="triggerParent"></i-child>
+    </view>
 </view>

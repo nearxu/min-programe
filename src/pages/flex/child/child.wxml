@@ -1,0 +1,6 @@
+<view>
+    <view>hello my is child ,i have to emit a event to parent</view>
+    <view>
+      <button bindtap="tapname">tap value 'hello to parent'</button>
+    </view>
+</view>
